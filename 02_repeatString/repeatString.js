@@ -1,12 +1,17 @@
 const repeatString = function(inputString, repeatQuantity) {
   let i = 0;
   let outputString = '';
-  do {
-    outputString += inputString;
-    i++;
+  if (repeatQuantity === 0) {
+    
+  } else if (repeatQuantity < 0) {
+    outputString = "ERROR";
+  } else {
+    do {
+      outputString += inputString;
+      i++;
+    }
+    while (i < repeatQuantity);
   }
-  while (i < repeatQuantity);
-
   return outputString;
 };
 
