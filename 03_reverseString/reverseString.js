@@ -1,10 +1,14 @@
 const reverseString = function(inputString) {
   let backwardString = '';
   let i = inputString.length - 1;
-  do {
-    backwardString += inputString[i];
-    i--;
-  } while (i>=0);
+  if (inputString == '' || inputString == undefined){
+    
+  } else {
+    do {
+      backwardString += inputString[i];
+      i--;
+    } while (i>=0);
+  }
   return backwardString;
 };
 
