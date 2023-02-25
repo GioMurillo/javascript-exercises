@@ -1,5 +1,5 @@
-let backwardString = '';
 const reverseString = function(inputString) {
+  let backwardString = '';
   let i = inputString.length - 1;
   do {
     backwardString += inputString[i];
