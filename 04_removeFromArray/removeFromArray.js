@@ -1,9 +1,14 @@
-const removeFromArray = function(inputString, removeValue) {
-  let outputString='';
-  for (i=0;i<inputString.length-1;i++) {
-    if (inputString[i]!=removeValue) {
-      outputString+=inputString[i];
-    } 
+const removeFromArray = function(originalArray, ...args) {
+  let inputArray=[];
+  let outputArray=[];
+  outputArray = args;
+  for (i=0;i<inputArray.length-1;i++) {
+    for (j=0;j<args.length-1;j++){
+      if (inputArray[i]!=args[j]) {
+        outputArray+=inputArray[i];
+      } 
+    }
+    
   }
   return outputString;
 };
