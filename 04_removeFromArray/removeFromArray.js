@@ -4,9 +4,11 @@ const removeFromArray = function(originalArray, ...args) {
   for (let i=0; i<originalArray.length; i++) {
     for (let j=0; j<args.length; j++){
       if (originalArray[i]===args[j]) {
-        j++;
+        i++;
+        console.log("Found an element to skip:" + args[j]);
       }
-      console.log(originalArray[i] + " and " + args[j]);
+      console.log("Comparing " + originalArray[i] + "["+i+"]" + " and " 
+        + args[j] + "["+j+"]");
     }
     outputArray.push(originalArray[i]);
     console.log("outputArray= " + outputArray); 
