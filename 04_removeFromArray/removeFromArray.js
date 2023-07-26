@@ -10,7 +10,7 @@ const removeFromArray = function(originalArray, ...args) {
         + argsArray[j] + "["+j+"]");
         console.log("Found an element to remove:" + argsArray[j]);
         outputArray.splice(i,1);
-        console.log("Deprecate j");
+        console.log("Deprecate i");
         i--;
       }
       console.log("Comparing " + originalArray[i] + "["+i+"]" + " and " 
