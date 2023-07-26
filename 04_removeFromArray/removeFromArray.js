@@ -6,8 +6,12 @@ const removeFromArray = function(originalArray, ...args) {
   for (let i=0; i<originalArray.length; i++) {
     for (let j=0; j<argsArray.length; j++){
       if (originalArray[i]===argsArray[j]) {
+        console.log("Comparing " + originalArray[i] + "["+i+"]" + " and " 
+        + argsArray[j] + "["+j+"]");
+        console.log("Found an element to remove:" + argsArray[j]);
         outputArray.splice(i,1);
-        console.log("Found an element to skip:" + argsArray[j]);
+        console.log("Deprecate j");
+        i--;
       }
       console.log("Comparing " + originalArray[i] + "["+i+"]" + " and " 
         + argsArray[j] + "["+j+"]");
