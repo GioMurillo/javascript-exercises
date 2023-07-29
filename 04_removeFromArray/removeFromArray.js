@@ -3,20 +3,12 @@ const removeFromArray = function(originalArray, ...args) {
   valuesToRemove = Array.from(args); //go from array-like to array
   console.log(valuesToRemove);
 
-  originalArray.forEach((element) => {
-    if(!valuesToRemove.includes(element)) {
-      outputArray.push(element);
-    };
-  });
+  outputArray = originalArray.filter( () => args);  
   
   console.log(outputArray);
 
   return outputArray;
 
-};
-
-const logArrayElements = (element, index) => {
-  console.log(`a[${index}] = ${element}`);
 };
 
 
