@@ -1,20 +1,24 @@
 const removeFromArray = function(originalArray, ...args) {
-  //originalArray.forEach("originalArray: " + logArrayElements);
-  //args.forEach(logArrayElements);
-
   outputArray = [];
   valuesToRemove = Array.from(args); //go from array-like to array
+  console.log(valuesToRemove);
 
+  originalArray.forEach((element) => {
+    if(!valuesToRemove.includes(element)) {
+      outputArray.push(element);
+    };
+  });
+  
+  console.log(outputArray);
+
+  return outputArray;
 
 };
 
-const logArrayElements = (element, index /*, array */) => {
+const logArrayElements = (element, index) => {
   console.log(`a[${index}] = ${element}`);
 };
 
-function checkMatch(element, index, array) {
-
-}
 
 // Do not edit below this line
 module.exports = removeFromArray;
