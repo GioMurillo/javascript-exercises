@@ -3,13 +3,19 @@ const removeFromArray = function(originalArray, ...args) {
   valuesToRemove = Array.from(args); //go from array-like to array
   console.log(valuesToRemove);
 
-  outputArray = originalArray.filter( () => args);  
+  outputArray = originalArray.filter(element => {
+    console.log(`element: ${element}`);    
+    if(valuesToRemove.filter(value => value) != element){
+      return element;
+    }
+  }
+  );  
   
   console.log(outputArray);
 
   return outputArray;
 
-};
+}
 
 
 // Do not edit below this line
