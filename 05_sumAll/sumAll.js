@@ -9,13 +9,11 @@ const sumAll = function(num1, num2) {
     if (num1 == num2) {
       return 0;
     } else if (num1 > num2) {
-        sum = num2;
-        for(i=num2+1; i<num1+1; i++) {
+        for(i=num2; i<=num1; i++) {
           sum += i;
         }
     } else {
-       sum = num1;
-       for(i=num1+1; i<num2+1; i++) {
+       for(i=num1; i<=num2; i++) {
         sum += i;
        }
     }
