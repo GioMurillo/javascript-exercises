@@ -1,5 +1,5 @@
 const leapYears = function(year) {
-  if(year>400) {
+  if(year<400) {
     if(year%4 == 0) {
         return true;
     } else {
