@@ -5,11 +5,8 @@ const removeFromArray = function(originalArray, ...args) {
 
   outputArray = originalArray.filter(element => {
     console.log(`element: ${element}`);    
-    if(valuesToRemove.filter(value => value) != element){
-      return element;
-    }
-  }
-  );  
+    return !valuesToRemove.find(val => val===element);
+  });  
   
   console.log(outputArray);
 
